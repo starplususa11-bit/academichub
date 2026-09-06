@@ -81,7 +81,7 @@ export default function Navbar() {
                   Academic<span style={{ color: 'var(--brand-primary)' }}>Hub</span>
                 </span>
                 <span
-                  className="text-[10px] font-medium tracking-wider uppercase mt-0.5"
+                  className="hidden sm:block text-[10px] font-medium tracking-wider uppercase mt-0.5"
                   style={{ color: 'var(--text-muted)' }}
                 >
                   Academic Workspace

@@ -62,7 +62,7 @@ export default function LandingPage() {
   ];
 
   return (
-    <div className="space-y-20 pb-20 animate-fade-in">
+    <div className="space-y-20 pb-20 animate-fade-in overflow-x-hidden w-full">
       
       {/* HERO SECTION */}
       <section className="relative pt-12 pb-8 overflow-hidden">
@@ -183,44 +183,44 @@ export default function LandingPage() {
                 </div>
 
                 {/* Interactive Mode Pills */}
-                <div className="flex p-1 bg-slate-100/80 rounded-xl gap-1 text-xs font-semibold text-slate-600">
+                <div className="grid grid-cols-3 p-1 bg-slate-100/80 rounded-xl gap-1 text-[11px] sm:text-xs font-semibold text-slate-600">
                   <button
                     type="button"
                     onClick={() => setHeroTab('ai')}
-                    className={`flex-1 py-1.5 px-2 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                    className={`py-1.5 px-1 sm:px-2 rounded-lg transition-all flex items-center justify-center gap-1 ${
                       heroTab === 'ai'
                         ? 'bg-white text-indigo-600 shadow-xs font-bold'
                         : 'hover:text-slate-900'
                     }`}
                   >
-                    <Sparkles className="w-3.5 h-3.5 text-indigo-600" />
-                    <span>AI Synthesis</span>
+                    <Sparkles className="w-3.5 h-3.5 text-indigo-600 shrink-0" />
+                    <span className="truncate">AI Study</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={() => setHeroTab('quiz')}
-                    className={`flex-1 py-1.5 px-2 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                    className={`py-1.5 px-1 sm:px-2 rounded-lg transition-all flex items-center justify-center gap-1 ${
                       heroTab === 'quiz'
                         ? 'bg-white text-indigo-600 shadow-xs font-bold'
                         : 'hover:text-slate-900'
                     }`}
                   >
-                    <Zap className="w-3.5 h-3.5 text-amber-500" />
-                    <span>Interactive Quiz</span>
+                    <Zap className="w-3.5 h-3.5 text-amber-500 shrink-0" />
+                    <span className="truncate">Quiz</span>
                   </button>
 
                   <button
                     type="button"
                     onClick={() => setHeroTab('notes')}
-                    className={`flex-1 py-1.5 px-2 rounded-lg transition-all flex items-center justify-center gap-1.5 ${
+                    className={`py-1.5 px-1 sm:px-2 rounded-lg transition-all flex items-center justify-center gap-1 ${
                       heroTab === 'notes'
                         ? 'bg-white text-indigo-600 shadow-xs font-bold'
                         : 'hover:text-slate-900'
                     }`}
                   >
-                    <FileText className="w-3.5 h-3.5 text-blue-500" />
-                    <span>Course Notes</span>
+                    <FileText className="w-3.5 h-3.5 text-blue-500 shrink-0" />
+                    <span className="truncate">Notes</span>
                   </button>
                 </div>
 

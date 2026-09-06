@@ -73,7 +73,7 @@ export default function PublicLayout() {
                 <>
                   <Link
                     to="/login"
-                    className="px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1 border"
+                    className="px-2.5 sm:px-3.5 py-1.5 rounded-xl text-xs font-semibold transition-all flex items-center gap-1 border"
                     style={{
                       borderColor: 'var(--border-subtle)',
                       color: 'var(--text-secondary)',
@@ -83,12 +83,13 @@ export default function PublicLayout() {
                     onMouseLeave={(e) => { e.currentTarget.style.backgroundColor = 'transparent'; }}
                   >
                     <LogIn className="w-3.5 h-3.5" style={{ color: 'var(--brand-primary)' }} />
-                    <span>Sign In</span>
+                    <span className="hidden xs:inline sm:inline">Sign In</span>
+                    <span className="xs:hidden sm:hidden">Login</span>
                   </Link>
 
                   <Link
                     to="/signup"
-                    className="px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition-all flex items-center gap-1"
+                    className="px-2.5 sm:px-4 py-1.5 rounded-xl bg-indigo-600 hover:bg-indigo-700 text-white text-xs font-semibold shadow-xs transition-all flex items-center gap-1 shrink-0"
                   >
                     <UserPlus className="w-3.5 h-3.5" />
                     <span>Get Started</span>

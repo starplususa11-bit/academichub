@@ -206,7 +206,7 @@ export default function SignupPage() {
     >
       
       {/* Left Branding Column */}
-      <div className="md:col-span-5 bg-slate-900 text-white p-8 sm:p-10 flex flex-col justify-between relative overflow-hidden">
+      <div className="md:col-span-5 bg-slate-900 text-white p-5 sm:p-8 flex flex-col justify-between relative overflow-hidden">
         <div className="absolute -top-12 -right-12 w-48 h-48 bg-indigo-600/30 rounded-full blur-2xl" />
         <div className="absolute -bottom-12 -left-12 w-48 h-48 bg-violet-600/20 rounded-full blur-2xl" />
 
@@ -245,7 +245,7 @@ export default function SignupPage() {
       </div>
 
       {/* Right Form Column */}
-      <div className="md:col-span-7 p-8 sm:p-10 flex flex-col justify-center" style={{ backgroundColor: 'var(--surface-card)' }}>
+      <div className="md:col-span-7 p-5 sm:p-8 flex flex-col justify-center" style={{ backgroundColor: 'var(--surface-card)' }}>
         <div className="max-w-md mx-auto w-full space-y-5">
 
           {/* STEP 1: REGISTRATION DETAILS */}
