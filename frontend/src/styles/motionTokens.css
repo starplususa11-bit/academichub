@@ -1,0 +1,29 @@
+/* Motion Tokens - reusable durations and easings */
+:root {
+  /* Durations */
+  --duration-fast: 100ms;
+  --duration-standard: 200ms;
+  --duration-emphasis: 300ms;
+  --duration-ambient: 20000ms; /* 20s for slow ambient loops */
+
+  /* Easing */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Utility classes using tokens */
+.fade-up {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: fadeUp var(--duration-standard) var(--ease-out) forwards;
+}
+@keyframes fadeUp {
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.scale-up {
+  opacity: 0;
+  transform: scale(0.96);
+  animation: scaleUp var(--duration-standard) var(--ease-out) forwards;
+}
+@keyframes scaleUp { to { opacity: 1; transform: scale(1); } }

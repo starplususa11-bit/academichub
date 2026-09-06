@@ -1,0 +1,482 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+@import "./styles/motionTokens.css";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ════════════════════════════════════════════════════════════════
+   THEME DESIGN TOKENS — Light Mode Defaults
+   ════════════════════════════════════════════════════════════════ */
+@layer base {
+  :root {
+    /* ── Brand ── */
+    --brand-primary:     #4F46E5;
+    --brand-hover:       #4338CA;
+    --brand-light:       #EEF2FF;
+    --brand-text:        #4F46E5;
+
+    /* ── Page Surfaces ── */
+    --bg-main:           #F8FAFC;
+    --bg-secondary:      #F1F5F9;
+    --bg-tertiary:       #E2E8F0;
+
+    /* ── Card / Panel Surfaces ── */
+    --surface-card:      #FFFFFF;
+    --surface-raised:    #FFFFFF;
+    --surface-overlay:   rgba(255, 255, 255, 0.96);
+    --surface-input:     #F8FAFC;
+    --surface-input-hover: #F1F5F9;
+    --surface-input-focus: #FFFFFF;
+
+    /* ── Text ── */
+    --text-primary:      #0F172A;
+    --text-secondary:    #475569;
+    --text-muted:        #64748B;
+    --text-placeholder:  #94A3B8;
+    --text-inverse:      #FFFFFF;
+    --text-link:         #4F46E5;
+    --text-link-hover:   #4338CA;
+
+    /* ── Borders ── */
+    --border-subtle:     #E2E8F0;
+    --border-default:    #CBD5E1;
+    --border-strong:     #94A3B8;
+    --border-focus:      #4F46E5;
+
+    /* ── Shadows ── */
+    --shadow-xs:         0 1px 2px 0 rgba(15, 23, 42, 0.04);
+    --shadow-sm:         0 1px 3px 0 rgba(15, 23, 42, 0.06), 0 1px 2px -1px rgba(15, 23, 42, 0.04);
+    --shadow-md:         0 4px 12px -2px rgba(15, 23, 42, 0.08);
+    --shadow-lg:         0 10px 24px -4px rgba(15, 23, 42, 0.10);
+    --shadow-modal:      0 25px 50px -12px rgba(15, 23, 42, 0.18);
+
+    /* ── Semantic ── */
+    --color-success-bg:  #ECFDF5;
+    --color-success-text:#065F46;
+    --color-success-border:#A7F3D0;
+    --color-error-bg:    #FEF2F2;
+    --color-error-text:  #991B1B;
+    --color-error-border:#FECACA;
+    --color-warning-bg:  #FFFBEB;
+    --color-warning-text:#92400E;
+    --color-warning-border:#FDE68A;
+    --color-info-bg:     #EFF6FF;
+    --color-info-text:   #1E40AF;
+    --color-info-border: #BFDBFE;
+
+    /* ── Glass Header ── */
+    --glass-bg:          rgba(255, 255, 255, 0.88);
+    --glass-border:      #E2E8F0;
+
+    /* ── Scrollbar ── */
+    --scrollbar-track:   #F1F5F9;
+    --scrollbar-thumb:   #CBD5E1;
+    --scrollbar-hover:   #94A3B8;
+
+    /* ── Skeleton ── */
+    --skeleton-base:     #E2E8F0;
+    --skeleton-shine:    #F1F5F9;
+
+    /* ── Toggle ── */
+    --toggle-track-off:  #CBD5E1;
+    --toggle-track-on:   #4F46E5;
+  }
+
+  /* ════════════════════════════════════════════════════════════════
+     DARK MODE TOKENS — Sophisticated Dark Palette
+     ════════════════════════════════════════════════════════════════ */
+  [data-theme="dark"] {
+    /* ── Brand (slightly softer in dark) ── */
+    --brand-primary:     #6366F1;
+    --brand-hover:       #7C7FFF;
+    --brand-light:       rgba(99, 102, 241, 0.15);
+    --brand-text:        #818CF8;
+
+    /* ── Page Surfaces ── */
+    --bg-main:           #0D1117;
+    --bg-secondary:      #161B22;
+    --bg-tertiary:       #21262D;
+
+    /* ── Card / Panel Surfaces ── */
+    --surface-card:      #1C2128;
+    --surface-raised:    #21262D;
+    --surface-overlay:   rgba(28, 33, 40, 0.97);
+    --surface-input:     #21262D;
+    --surface-input-hover: #2D333B;
+    --surface-input-focus: #2D333B;
+
+    /* ── Text ── */
+    --text-primary:      #E6EDF3;
+    --text-secondary:    #8B949E;
+    --text-muted:        #6E7681;
+    --text-placeholder:  #484F58;
+    --text-inverse:      #0D1117;
+    --text-link:         #818CF8;
+    --text-link-hover:   #A5B4FC;
+
+    /* ── Borders ── */
+    --border-subtle:     #21262D;
+    --border-default:    #30363D;
+    --border-strong:     #484F58;
+    --border-focus:      #6366F1;
+
+    /* ── Shadows (dark) ── */
+    --shadow-xs:         0 1px 2px 0 rgba(0, 0, 0, 0.4);
+    --shadow-sm:         0 1px 3px 0 rgba(0, 0, 0, 0.5), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
+    --shadow-md:         0 4px 12px -2px rgba(0, 0, 0, 0.6);
+    --shadow-lg:         0 10px 24px -4px rgba(0, 0, 0, 0.7);
+    --shadow-modal:      0 25px 50px -12px rgba(0, 0, 0, 0.8);
+
+    /* ── Semantic ── */
+    --color-success-bg:  rgba(6, 78, 59, 0.3);
+    --color-success-text:#34D399;
+    --color-success-border:rgba(52, 211, 153, 0.3);
+    --color-error-bg:    rgba(127, 29, 29, 0.3);
+    --color-error-text:  #F87171;
+    --color-error-border:rgba(248, 113, 113, 0.3);
+    --color-warning-bg:  rgba(120, 53, 15, 0.3);
+    --color-warning-text:#FCD34D;
+    --color-warning-border:rgba(252, 211, 77, 0.3);
+    --color-info-bg:     rgba(30, 58, 138, 0.3);
+    --color-info-text:   #93C5FD;
+    --color-info-border: rgba(147, 197, 253, 0.3);
+
+    /* ── Glass Header ── */
+    --glass-bg:          rgba(13, 17, 23, 0.92);
+    --glass-border:      #21262D;
+
+    /* ── Scrollbar ── */
+    --scrollbar-track:   #161B22;
+    --scrollbar-thumb:   #30363D;
+    --scrollbar-hover:   #484F58;
+
+    /* ── Skeleton ── */
+    --skeleton-base:     #21262D;
+    --skeleton-shine:    #2D333B;
+
+    /* ── Toggle ── */
+    --toggle-track-off:  #30363D;
+    --toggle-track-on:   #6366F1;
+  }
+
+  /* ════════════════════════════════════════════════════════════════
+     BASE STYLES — use tokens everywhere
+     ════════════════════════════════════════════════════════════════ */
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    -webkit-font-smoothing: antialiased;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+  }
+
+  .text-white h1, .text-white h2, .text-white h3, .text-white h4, .text-white h5, .text-white h6,
+  h1.text-white, h2.text-white, h3.text-white, h4.text-white, h5.text-white, h6.text-white {
+    color: #FFFFFF !important;
+  }
+
+  /* ── Form elements inherit theme properly ── */
+  input, textarea, select {
+    color: var(--text-primary);
+    background-color: var(--surface-input);
+  }
+
+  input::placeholder, textarea::placeholder {
+    color: var(--text-placeholder);
+  }
+
+  /* ── Links ── */
+  a {
+    color: var(--text-link);
+  }
+}
+
+/* ════════════════════════════════════════════════════════════════
+   COMPONENT UTILITIES — theme-aware
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Cards ── */
+.academic-card {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-xs);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.academic-card:hover {
+  border-color: var(--border-default);
+  box-shadow: var(--shadow-md);
+}
+
+.academic-card-interactive {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-xs);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.academic-card-interactive:hover {
+  border-color: var(--brand-primary);
+  box-shadow: 0 8px 20px -4px rgba(99, 102, 241, 0.15);
+  transform: translateY(-2px);
+}
+
+/* ── Glass Navigation Bar ── */
+.glass-header {
+  background: var(--glass-bg);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--glass-border);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* ── Theme-aware sidebar/panel ── */
+.theme-panel {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-xs);
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+/* ── Theme-aware input ── */
+.theme-input {
+  background-color: var(--surface-input);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-primary);
+  transition:
+    background-color 0.15s ease,
+    border-color 0.15s ease,
+    box-shadow 0.15s ease;
+}
+.theme-input:hover {
+  background-color: var(--surface-input-hover);
+  border-color: var(--border-default);
+}
+.theme-input:focus {
+  background-color: var(--surface-input-focus);
+  border-color: var(--border-focus);
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+}
+.theme-input::placeholder {
+  color: var(--text-placeholder);
+}
+
+/* ── Overlay / Modal backdrop ── */
+.theme-overlay {
+  background-color: rgba(0, 0, 0, 0.55);
+}
+[data-theme="dark"] .theme-overlay {
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+/* ── Theme-aware modal shell ── */
+.theme-modal {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  box-shadow: var(--shadow-modal);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+/* ── Skeleton pulse (dark-aware) ── */
+.skeleton-pulse {
+  background-color: var(--skeleton-base);
+  border-radius: 0.375rem;
+  animation: skeletonPulse 1.6s ease-in-out infinite;
+}
+@keyframes skeletonPulse {
+  0%, 100% { background-color: var(--skeleton-base); }
+  50%       { background-color: var(--skeleton-shine); }
+}
+
+/* ── Navigation active state (theme) ── */
+.nav-item-active {
+  background-color: var(--brand-light);
+  color: var(--brand-primary);
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+.nav-item-inactive {
+  color: var(--text-secondary);
+}
+.nav-item-inactive:hover {
+  background-color: var(--bg-secondary);
+  color: var(--text-primary);
+}
+
+/* ── Badge colours (dark-safe) ── */
+[data-theme="dark"] .badge-pdf     { background-color: rgba(220, 38, 38, 0.15); color: #F87171; border-color: rgba(248, 113, 113, 0.3); }
+[data-theme="dark"] .badge-pptx    { background-color: rgba(217, 119, 6, 0.15); color: #FCD34D; border-color: rgba(252, 211, 77, 0.3); }
+[data-theme="dark"] .badge-zip     { background-color: rgba(124, 58, 237, 0.15); color: #A78BFA; border-color: rgba(167, 139, 250, 0.3); }
+[data-theme="dark"] .badge-default { background-color: rgba(99, 102, 241, 0.15); color: #818CF8; border-color: rgba(129, 140, 248, 0.3); }
+
+/* ════════════════════════════════════════════════════════════════
+   SCROLLBAR — theme-aware
+   ════════════════════════════════════════════════════════════════ */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 9999px; }
+::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-hover); }
+
+/* ════════════════════════════════════════════════════════════════
+   ANIMATIONS
+   ════════════════════════════════════════════════════════════════ */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(4px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+/* ════════════════════════════════════════════════════════════════
+   TAILWIND DARK-MODE OVERRIDES via data-theme attribute
+   These patch common Tailwind colour utilities used throughout
+   the app so they respond to [data-theme="dark"] automatically.
+   ════════════════════════════════════════════════════════════════ */
+
+/* ── Page backgrounds ── */
+[data-theme="dark"] .bg-\[\#F8FAFC\],
+[data-theme="dark"] .bg-\[\#0B0F19\] { background-color: var(--bg-main) !important; }
+
+[data-theme="dark"] .bg-white { background-color: var(--surface-card) !important; }
+[data-theme="dark"] .bg-slate-50 { background-color: var(--bg-secondary) !important; }
+[data-theme="dark"] .bg-slate-100 { background-color: var(--bg-tertiary) !important; }
+[data-theme="dark"] .bg-slate-100\/80 { background-color: var(--bg-tertiary) !important; }
+[data-theme="dark"] .bg-slate-900 { background-color: #0D1117 !important; }
+
+/* ── Text ── */
+[data-theme="dark"] .text-slate-900 { color: var(--text-primary) !important; }
+[data-theme="dark"] .text-slate-800 { color: var(--text-primary) !important; }
+[data-theme="dark"] .text-slate-700 { color: var(--text-secondary) !important; }
+[data-theme="dark"] .text-slate-600 { color: var(--text-secondary) !important; }
+[data-theme="dark"] .text-slate-500 { color: var(--text-muted) !important; }
+[data-theme="dark"] .text-slate-400 { color: var(--text-muted) !important; }
+
+/* ── Borders ── */
+[data-theme="dark"] .border-slate-100 { border-color: var(--border-subtle) !important; }
+[data-theme="dark"] .border-slate-200 { border-color: var(--border-subtle) !important; }
+[data-theme="dark"] .border-slate-200\/80 { border-color: var(--border-subtle) !important; }
+[data-theme="dark"] .border-slate-300 { border-color: var(--border-default) !important; }
+[data-theme="dark"] .border-b { border-color: var(--border-subtle); }
+
+/* ── Dividers ── */
+[data-theme="dark"] .divide-slate-100 > * + * { border-color: var(--border-subtle) !important; }
+[data-theme="dark"] .divide-y > * + * { border-color: var(--border-subtle) !important; }
+
+/* ── Auth layout dark backdrop (keep as brand experience) ── */
+[data-theme="dark"] .bg-\[\#0B0F19\] { background-color: #060A10 !important; }
+
+/* ── Input fields  ── */
+[data-theme="dark"] input[type="text"],
+[data-theme="dark"] input[type="email"],
+[data-theme="dark"] input[type="password"],
+[data-theme="dark"] input[type="number"],
+[data-theme="dark"] input[type="search"],
+[data-theme="dark"] input[type="tel"],
+[data-theme="dark"] input[type="url"],
+[data-theme="dark"] textarea,
+[data-theme="dark"] select {
+  background-color: var(--surface-input) !important;
+  color: var(--text-primary) !important;
+  border-color: var(--border-subtle) !important;
+}
+[data-theme="dark"] input::placeholder,
+[data-theme="dark"] textarea::placeholder {
+  color: var(--text-placeholder) !important;
+}
+[data-theme="dark"] input:focus,
+[data-theme="dark"] textarea:focus,
+[data-theme="dark"] select:focus {
+  background-color: var(--surface-input-focus) !important;
+  border-color: var(--border-focus) !important;
+}
+
+/* ── Hover backgrounds ── */
+[data-theme="dark"] .hover\:bg-slate-50:hover { background-color: var(--bg-secondary) !important; }
+[data-theme="dark"] .hover\:bg-slate-100:hover { background-color: var(--bg-tertiary) !important; }
+[data-theme="dark"] .hover\:bg-indigo-50:hover { background-color: var(--brand-light) !important; }
+[data-theme="dark"] .hover\:bg-indigo-100:hover { background-color: rgba(99, 102, 241, 0.2) !important; }
+[data-theme="dark"] .hover\:bg-red-50:hover { background-color: rgba(127, 29, 29, 0.3) !important; }
+
+/* ── Notification / Dropdown panels ── */
+[data-theme="dark"] .bg-white.rounded-2xl,
+[data-theme="dark"] .bg-white.rounded-xl {
+  background-color: var(--surface-card) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+/* ── Footer ── */
+[data-theme="dark"] .border-t { border-color: var(--border-subtle); }
+
+/* ── Indigo light backgrounds ── */
+[data-theme="dark"] .bg-indigo-50  { background-color: rgba(99, 102, 241, 0.12) !important; }
+[data-theme="dark"] .bg-indigo-100 { background-color: rgba(99, 102, 241, 0.18) !important; }
+[data-theme="dark"] .text-indigo-600 { color: var(--brand-text) !important; }
+[data-theme="dark"] .text-indigo-700 { color: var(--brand-text) !important; }
+[data-theme="dark"] .border-indigo-100 { border-color: rgba(99, 102, 241, 0.25) !important; }
+[data-theme="dark"] .border-indigo-200 { border-color: rgba(99, 102, 241, 0.3) !important; }
+
+/* ── Amber (bookmark, star) — keep warm, soften ── */
+[data-theme="dark"] .bg-amber-50  { background-color: rgba(217, 119, 6, 0.15) !important; }
+[data-theme="dark"] .bg-amber-100 { background-color: rgba(217, 119, 6, 0.20) !important; }
+[data-theme="dark"] .text-amber-800 { color: #FCD34D !important; }
+
+/* ── Emerald / Success ── */
+[data-theme="dark"] .bg-emerald-50  { background-color: var(--color-success-bg) !important; }
+[data-theme="dark"] .border-emerald-200 { border-color: var(--color-success-border) !important; }
+[data-theme="dark"] .text-emerald-800 { color: var(--color-success-text) !important; }
+[data-theme="dark"] .text-emerald-600 { color: var(--color-success-text) !important; }
+
+/* ── Red / Error ── */
+[data-theme="dark"] .bg-red-50  { background-color: var(--color-error-bg) !important; }
+[data-theme="dark"] .border-red-200 { border-color: var(--color-error-border) !important; }
+[data-theme="dark"] .text-red-700 { color: var(--color-error-text) !important; }
+[data-theme="dark"] .text-red-800 { color: var(--color-error-text) !important; }
+[data-theme="dark"] .bg-red-600  { background-color: #DC2626 !important; }
+
+/* ── Auth page card (white panel on dark bg) ── */
+[data-theme="dark"] .bg-white.rounded-3xl {
+  background-color: var(--surface-card) !important;
+}
+[data-theme="dark"] .bg-slate-900.text-white {
+  background-color: #161B22 !important;
+}
+
+/* ── Skeleton loaders ── */
+[data-theme="dark"] .bg-slate-200 { background-color: var(--skeleton-base) !important; }
+
+/* ── Ring / focus ring ── */
+[data-theme="dark"] .ring-2.ring-indigo-500\/20 {
+  --tw-ring-color: rgba(99, 102, 241, 0.25) !important;
+}
+
+/* ── Code badge (kbd / shortcut pill) ── */
+[data-theme="dark"] .bg-slate-200\/60 { background-color: var(--bg-tertiary) !important; }
+[data-theme="dark"] .border-slate-300\/60 { border-color: var(--border-default) !important; }
+
+/* ── Toggle switch track ── */
+[data-theme="dark"] .bg-slate-300 { background-color: var(--toggle-track-off) !important; }

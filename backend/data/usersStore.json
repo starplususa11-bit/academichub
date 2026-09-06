@@ -1,0 +1,95 @@
+[
+  {
+    "id": "u-superadmin",
+    "name": "Awais (Super Admin)",
+    "username": "awaisdemo123",
+    "email": "criminalmostwanted517@gmail.com",
+    "role": "admin",
+    "isSuperAdmin": true,
+    "status": "active",
+    "avatar": "https://images.unsplash.com/photo-1535713875002-d1d0cf377fde?w=150&auto=format&fit=crop&q=80",
+    "departmentId": "dep-cs",
+    "departmentName": "Central Administration",
+    "createdAt": "2026-09-04T09:34:41.112Z",
+    "passwordHash": "$2a$10$2GoTtVFNz2yI5dC8jjKrhukhbXar6NElteApibVY7Pq73tFkDK32C"
+  },
+  {
+    "id": "u1",
+    "name": "Alex Morgan",
+    "email": "alex@university.edu",
+    "role": "student",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    "departmentId": "dep-cs",
+    "semester": "6th",
+    "bookmarks": [],
+    "collections": [
+      {
+        "id": "col-1",
+        "name": "Algorithms Prep",
+        "resourceIds": [
+          "res-1",
+          "res-4"
+        ]
+      },
+      {
+        "id": "col-2",
+        "name": "Database Exams",
+        "resourceIds": [
+          "res-3"
+        ]
+      }
+    ],
+    "status": "active",
+    "passwordHash": "$2a$10$MwT9BezdcFdZeePV9Cmc3eM23aPZnEAgD7D70YEXVtsgipi8lSlm."
+  },
+  {
+    "id": "u2",
+    "name": "Dr. Robert Chen",
+    "email": "r.chen@university.edu",
+    "role": "teacher",
+    "avatar": "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&auto=format&fit=crop&q=80",
+    "departmentId": "dep-cs",
+    "title": "Associate Professor",
+    "coursesTaught": [
+      "cs-201",
+      "cs-301"
+    ],
+    "status": "active",
+    "passwordHash": "$2a$10$2GoTtVFNz2yI5dC8jjKrhulOsz.AmSZFw7HkN0JKfSEMmopdPwxnS"
+  },
+  {
+    "id": "u3",
+    "name": "Sarah Jenkins",
+    "email": "s.jenkins@university.edu",
+    "role": "moderator",
+    "avatar": "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150&auto=format&fit=crop&q=80",
+    "departmentId": "dep-ee",
+    "status": "active",
+    "passwordHash": "$2a$10$2GoTtVFNz2yI5dC8jjKrhuKYKAGaBg9ZeTwIoAo/ApjXErEEUlGbq"
+  },
+  {
+    "id": "u4",
+    "name": "Admin System",
+    "email": "admin@academichub.edu",
+    "role": "admin",
+    "avatar": "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150&auto=format&fit=crop&q=80",
+    "departmentId": "dep-cs",
+    "status": "active",
+    "passwordHash": "$2a$10$2GoTtVFNz2yI5dC8jjKrhuEaTlc/y6vujsq6Chdp3Z.N0uVwsmRCO"
+  },
+  {
+    "id": "u-1788515786275",
+    "name": "Carl Jhonson",
+    "email": "idk911khan@gmail.com",
+    "passwordHash": "$2a$10$ztHadRms0yusCt5vrfWSKuGjq4OSuPSr0k2N7QKBqjvNO5D4yWwU2",
+    "role": "student",
+    "status": "active",
+    "isApproved": true,
+    "departmentId": "dep-cs",
+    "departmentName": "Computer Science & Software Eng",
+    "avatar": "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150&auto=format&fit=crop&q=80",
+    "bookmarks": [],
+    "collections": [],
+    "createdAt": "2026-09-04T09:56:26.275Z"
+  }
+]
